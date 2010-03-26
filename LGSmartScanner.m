@@ -179,7 +179,7 @@ typedef struct IOATASmartVendorSpecificData
 					self.wearCount = [NSNumber numberWithUnsignedChar:currentAttribute.current];
 
 					NSMutableString *wearTitle;
-					wearTitle = [NSMutableString stringWithFormat: @"Wear: %@", [self.wearCount stringValue]];
+					wearTitle = [NSMutableString stringWithFormat: @"Avg Wear Cycles: %@", [self.wearCount stringValue]];
 					[driveAverageEraseCount setTitle:wearTitle];				
 				}
 				
@@ -225,7 +225,7 @@ ErrorExit1:
 	driveLifeIndicator = [trayMenu addItemWithTitle: @"Life:"  
 											 action: @selector (doNothing)  
 									  keyEquivalent: @""];
-	driveAverageEraseCount = [trayMenu addItemWithTitle: @"Erase:"  
+	driveAverageEraseCount = [trayMenu addItemWithTitle: @"Avg Wear Cycles:"  
 												 action: @selector (doNothing)  
 										  keyEquivalent: @""];
 	[trayMenu addItem:[NSMenuItem separatorItem]];
